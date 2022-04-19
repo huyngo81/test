@@ -14,8 +14,11 @@ jobs:
       id: myRequest
       uses: fjogeleit/http-request-action@v1
       with:
-        url: 'https://jsonplaceholder.typicode.com/posts/1000000000000'
-        method: 'GET'
+        url: 'https://jsonplaceholder.typicode.com/posts'
+        method: 'POST'
+        data: title='foo' & body='bar' & userId=1
+          
+        contentType: 'application/x-www-form-urlencoded'
         #username: ${{ secrets.AWX_USER }}
         #password: ${{ secrets.AWX_PASSWORD }}
     #- name: Get response
@@ -24,5 +27,5 @@ jobs:
        
     
     - name: doing something
-      if: failure()
+      if: success()
       run: echo "hello failure"
