@@ -21,6 +21,7 @@ jobs:
     - name: Get response
       run: |
         echo ${{ steps.myRequest.outputs.response }}
+        ls /xyz
     
     - name: doing something
       if: success()
