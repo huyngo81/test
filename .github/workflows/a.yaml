@@ -14,14 +14,14 @@ jobs:
       id: myRequest
       uses: fjogeleit/http-request-action@v1
       with:
-        url: 'https://jsonplaceholder.typicode.com/posts/1'
+        url: 'https://jsonplaceholder.typicode.com/posts/1000000000000'
         method: 'GET'
         #username: ${{ secrets.AWX_USER }}
         #password: ${{ secrets.AWX_PASSWORD }}
-    - name: Get response
-      run: |
-        echo ${{ steps.myRequest.outputs.response }}
-        ls /xyz
+    #- name: Get response
+    #  run: |
+    #    echo ${{ steps.myRequest.outputs.response }}
+       
     
     - name: doing something
       if: success()
