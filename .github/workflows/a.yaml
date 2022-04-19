@@ -14,7 +14,7 @@ jobs:
       id: myRequest
       uses: fjogeleit/http-request-action@v1
       with:
-        url: 'https://jsonplaceholder.typicode.com/posts'
+        url: 'https://jsonplaceholder.typicode.com/posts/1'
         method: 'GET'
         #username: ${{ secrets.AWX_USER }}
         #password: ${{ secrets.AWX_PASSWORD }}
