@@ -21,9 +21,10 @@ jobs:
         contentType: 'application/x-www-form-urlencoded'
         #username: ${{ secrets.AWX_USER }}
         #password: ${{ secrets.AWX_PASSWORD }}
-    #- name: Get response
-    #  run: |
-    #    echo ${{ steps.myRequest.outputs.response }}
+    - name: Get response
+      if: success()
+      run: |
+        echo ${{ steps.myRequest.outputs.response }}
        
     
     - name: doing something
