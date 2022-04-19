@@ -19,4 +19,4 @@ jobs:
         #username: ${{ secrets.AWX_USER }}
         #password: ${{ secrets.AWX_PASSWORD }}
     - name: Get response
-      run: echo ${{ steps.myReqest.outputs.response}}
+      run: echo ${{ steps.myRequest.outputs.response }}
