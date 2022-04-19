@@ -9,11 +9,11 @@ jobs:
   http-request:
     name: http request
     runs-on: ubuntu-20.04
-  steps:
-  - name: Get sample request
-    uses: fjogeleit/http-request-action@v1
-    with:
-      url: 'https://jsonplaceholder.typicode.com/posts'
-      method: 'GET'
-      #username: ${{ secrets.AWX_USER }}
-      #password: ${{ secrets.AWX_PASSWORD }}
+    steps:
+    - name: Get sample request
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: 'https://jsonplaceholder.typicode.com/posts'
+        method: 'GET'
+        #username: ${{ secrets.AWX_USER }}
+        #password: ${{ secrets.AWX_PASSWORD }}
